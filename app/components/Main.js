@@ -3,8 +3,7 @@ import React from 'react'
 const Main = React.createClass({
   render () {
     return (
-      <div>
-        Hello from Main Component!
+      <div className='main-container'>
         {this.props.children}
       </div>
     )
