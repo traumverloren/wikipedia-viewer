@@ -1,7 +1,13 @@
 const styles = {
-  homeBg: {
-    backgroundImage: 'url("../app/images/102H.jpg")',
-    backgroundSize: 'cover',
+  mainContainer: {
+    height: '100%',
+    width: '100%'
+  },
+
+  homeContainer: {
+    backgroundImage: 'url("../app/images/doge.jpg")',
+    backgroundSize: 'stretch',
+
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -11,7 +17,8 @@ const styles = {
   },
 
   jumbotron: {
-    background: '#fff',
+    marginTop: '50px',
+    background: '#FFECB3',
     fontFamily: 'Courier',
     paddingBottom: '25px'
   },
