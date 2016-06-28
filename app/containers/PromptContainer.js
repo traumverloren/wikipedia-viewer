@@ -14,11 +14,18 @@ const PromptContainer = React.createClass({
                 placeholder="I'm searching for..."
                 type="text" />
             </div>
-            <div className="form-group col-sm-6 col-sm-offset-3">
+            <div className="form-group col-sm-6">
               <button
-                className="btn btn-block btn-success"
+                className="btn btn-success"
                 type="submit">
                 Search
+              </button>
+            </div>
+            <div className="form-group col-sm-offset-6">
+              <button
+                className="btn btn-warning"
+                type="submit">
+                Random Me!
               </button>
             </div>
           </form>
