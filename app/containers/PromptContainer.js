@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styles from '../styles'
 
-const PromptContainer = React.createClass({
+class PromptContainer extends Component {
   render () {
     return (
       <div className="jumbotron col-sm-6 text-center" style={styles.jumbotron}>
@@ -33,6 +33,6 @@ const PromptContainer = React.createClass({
       </div>
     )
   }
-});
+}
 
 export default PromptContainer

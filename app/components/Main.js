@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styles from '../styles'
 
-const Main = React.createClass({
+class Main extends Component {
   render () {
     return (
       <div className="main-container" style={styles.mainContainer}>
@@ -9,6 +9,6 @@ const Main = React.createClass({
       </div>
     )
   }
-});
+}
 
 export default Main
