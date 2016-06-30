@@ -5,6 +5,9 @@ class Prompt extends Component {
   render () {
     return (
 
+      // Will move view logic here and refactor to pure function
+      // after works in the PromptContainer!
+
     )
   }
 }

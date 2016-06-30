@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import styles from '../styles'
 
 class PromptContainer extends Component {
+  constructor () {
+    super()
+    this.state = {
+      keyword: ''
+    }
+  }
+
   render () {
     return (
       <div className="jumbotron col-sm-6 text-center" style={styles.jumbotron}>
@@ -11,7 +18,7 @@ class PromptContainer extends Component {
             <div className="form-group">
               <input
                 className="form-control"
-                placeholder="So Wow I Seek"
+                placeholder="So Wow, I Find"
                 type="text" />
             </div>
             <div className="form-group col-sm-6">

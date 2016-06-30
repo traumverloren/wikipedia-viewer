@@ -19,7 +19,7 @@ const styles = {
   jumbotron: {
     marginTop: '50px',
     background: '#FFECB3',
-    fontFamily: 'Courier',
+    fontFamily: 'Comic Sans MS',
     paddingBottom: '25px'
   },
 };
