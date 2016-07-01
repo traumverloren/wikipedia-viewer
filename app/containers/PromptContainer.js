@@ -32,8 +32,6 @@ class PromptContainer extends Component {
     });
   }
 
-  // The bind(this) will go away once move this to Prompt component...
-
   render () {
     return (
       <Prompt onSubmitQuery={(event) => this.handleSubmitQuery(event)}
