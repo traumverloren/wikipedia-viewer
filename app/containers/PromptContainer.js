@@ -69,4 +69,8 @@ class PromptContainer extends Component {
   }
 }
 
+PromptContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
+}
+
 export default PromptContainer
