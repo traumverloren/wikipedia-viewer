@@ -5,7 +5,7 @@ function Prompt (props) {
   const { jumbotron } = styles
   const { onSubmitQuery, onUpdateQuery, keyword } = props
   return (
-    <div className="jumbotron col-sm-6 text-center" style={jumbotron}>
+    <div>
       <h3 style={{color: '#000000'}}>Such Wikipedia</h3>
       <div className="col-sm-12">
         <form onSubmit={onSubmitQuery}>

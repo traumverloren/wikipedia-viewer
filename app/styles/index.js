@@ -1,10 +1,10 @@
 const styles = {
-  mainContainer: {
+  background: {
     height: '100%',
     width: '100%'
   },
 
-  homeContainer: {
+  mainContainer: {
     backgroundImage: 'url("../app/images/doge.jpg")',
     backgroundSize: 'stretch',
 
