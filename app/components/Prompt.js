@@ -25,14 +25,16 @@ function Prompt (props) {
               Much Search
             </button>
           </div>
-          <div className="form-group col-sm-offset-6">
+        </form>
+        <div className="form-group col-sm-offset-6">
+          <a href="https://en.wikipedia.org/wiki/Special:Random">
             <button
               className="btn btn-warning"
               type="submit">
               Amaze Random
             </button>
-          </div>
-        </form>
+          </a>
+        </div>
       </div>
     </div>
   )

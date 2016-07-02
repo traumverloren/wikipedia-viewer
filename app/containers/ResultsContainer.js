@@ -11,14 +11,13 @@ class ResultsContainer extends Component {
 
   // component did mount: return results from wikipedia api, top 5?
 
-
   render () {
     const { keyword } = this.props.location.query
     const { jumbotron } = styles
 
     return (
       <div>
-        <h3 style={{color: '#000000'}}>Such Wikipedia</h3>
+        <h3 style={{color: '#000000'}}>Such Results</h3>
         <div className="col-sm-12">
 
           <p>{keyword}</p>
