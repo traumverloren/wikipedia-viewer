@@ -5,17 +5,23 @@ import { getResults } from '../utils/wikipediaHelpers'
 class ResultsContainer extends Component {
   constructor () {
     super()
-    this.setState = {
-      searchResults: []
+    this.state = {
+      results: []
     }
   }
 
   // component did mount: return results from wikipedia api, top 5?
   async componentDidMount () {
     const { keyword } = this.props.location.query
-
-    const result = await getResults(keyword)
-    console.log(result)
+    try {
+      const searchResults = await getResults(keyword)
+      console.log(searchResults)
+      this.setState({
+        results: searchResults
+      })
+    } catch (error) {
+     console.warn('Error in componentDidMount', error)
+   }
   }
 
   render () {
@@ -24,10 +30,10 @@ class ResultsContainer extends Component {
 
     return (
       <div>
-        <h3 style={{color: '#000000'}}>Such Results</h3>
+        <h3 style={{color: '#8e44ad'}}>Such Results</h3>
         <div className="col-sm-12">
 
-          <p>{keyword}</p>
+          <p>{this.state.results}</p>
         </div>
       </div>
     )

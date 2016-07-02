@@ -6,7 +6,7 @@ function Prompt (props) {
   const { onSubmitQuery, onUpdateQuery, keyword } = props
   return (
     <div>
-      <h3 style={{color: '#000000'}}>Such Wikipedia</h3>
+      <h3 style={{color: '#8e44ad'}}>Such Wikipedia</h3>
       <div className="col-sm-12">
         <form onSubmit={onSubmitQuery}>
           <div className="form-group">
