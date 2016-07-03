@@ -8,6 +8,7 @@ const styles = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     paddingTop: '10px',
+    fontFamily: 'Comic Sans MS'
   },
 
   mainContainer: {
@@ -16,21 +17,22 @@ const styles = {
     justifyContent: 'center',
     height: '100%',
     width: '100%',
-    overflow: 'auto',
+    overflow: 'auto'
   },
 
   jumbotron: {
     background: '#FFECB3',
-    fontFamily: 'Comic Sans MS',
     paddingBottom: '25px'
   },
 
   resultsWrapper: {
-    backgroundColor: '#FFECB3'
+    backgroundColor: '#FFECB3',
+    borderRadius: '15px',
+    padding: '0 10px 0 10px',
+    marginBottom: '10px'
   },
 
   resultsHeader: {
-    fontFamily: 'Comic Sans MS',
     color: '#8e44ad'
   },
 
@@ -40,7 +42,6 @@ const styles = {
 
   result: {
     background: '#FFECB3',
-    fontFamily: 'Comic Sans MS'
   }
 }
 
