@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import styles from '../styles'
 import { getResults } from '../utils/wikipediaHelpers'
+import ResultsList from '../components/ResultsList'
 
 class ResultsContainer extends Component {
   constructor () {
     super()
     this.state = {
-      results: []
+      results: ['', [], [], []]
     }
   }
 
-  // component did mount: return results from wikipedia api, top 5?
   async componentDidMount () {
     const { keyword } = this.props.location.query
     try {
@@ -25,19 +25,15 @@ class ResultsContainer extends Component {
   }
 
   render () {
-    const { keyword } = this.props.location.query
-    const { jumbotron } = styles
-
     return (
-      <div>
-        <h3 style={{color: '#8e44ad'}}>Such Results</h3>
-        <div className="col-sm-12">
-
-          <p>{this.state.results}</p>
-        </div>
-      </div>
+      <ResultsList results={this.state.results} />
     )
   }
 }
+
+ResultsContainer.propTypes = {
+  results: PropTypes.array.isRequired
+}
+
 
 export default ResultsContainer

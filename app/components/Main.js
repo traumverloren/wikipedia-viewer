@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from '../styles'
-import MainContainer from './MainContainer'
 
 class Main extends Component {
   render () {
@@ -9,9 +8,7 @@ class Main extends Component {
     return (
       <div className="main-container" style={background}>
         <div className="container-fluid text-center" style={mainContainer}>
-          <MainContainer>
-            {this.props.children}
-          </MainContainer>
+          {this.props.children}
         </div>
       </div>
     )

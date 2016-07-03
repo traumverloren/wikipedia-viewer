@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import styles from '../styles'
+import MainContainer from './MainContainer'
 
 function Prompt (props) {
-  const { jumbotron } = styles
   const { onSubmitQuery, onUpdateQuery, keyword } = props
   return (
-    <div>
+    <MainContainer>
       <h3 style={{color: '#8e44ad'}}>Such Wikipedia</h3>
       <div className="col-sm-12">
         <form onSubmit={onSubmitQuery}>
@@ -36,7 +36,8 @@ function Prompt (props) {
           </a>
         </div>
       </div>
-    </div>
+    </MainContainer>
+
   )
 }
 

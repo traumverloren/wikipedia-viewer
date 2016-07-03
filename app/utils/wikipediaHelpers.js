@@ -7,5 +7,4 @@ export async function getResults(keyword) {
   } catch (error) {
     console.warn('Error in getResults', error)
   }
-// need to map these and create an array with title + description
 }
