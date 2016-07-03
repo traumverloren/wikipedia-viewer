@@ -28,8 +28,8 @@ const styles = {
   resultsWrapper: {
     backgroundColor: '#FFECB3',
     borderRadius: '15px',
-    padding: '0 10px 0 10px',
-    marginBottom: '10px'
+    padding: '0 10px 10px 10px',
+    marginBottom: '10px',
   },
 
   resultsHeader: {

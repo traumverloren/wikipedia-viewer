@@ -66,7 +66,7 @@ function Results ({ searchTerm, titles, descriptions, urls }) {
   return (
       <div style={style.resultsFlexContainer}>
         <div className="results-wrapper" style={resultsWrapper}>
-        <h4 style={resultsHeader}>Such Results:  <span style={resultsTitle}>"{searchTerm}"</span></h4>
+          <h4 style={resultsHeader}>Such Results:  <span style={resultsTitle}>"{searchTerm}"</span></h4>
 
           {titles.map((result, index) => {
             return (
