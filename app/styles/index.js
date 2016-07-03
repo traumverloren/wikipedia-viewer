@@ -8,7 +8,7 @@ const styles = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     paddingTop: '10px',
-    fontFamily: 'Comic Sans MS'
+    fontFamily: 'Comic Sans MS, Comic Sans, Chalkboard, Helvetica, Arial, sans-serif'
   },
 
   mainContainer: {
