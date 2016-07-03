@@ -1,13 +1,16 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import styles from '../styles'
 import { getResults } from '../utils/wikipediaHelpers'
-import ResultsList from '../components/ResultsList'
+import Results from '../components/Results'
 
 class ResultsContainer extends Component {
   constructor () {
     super()
     this.state = {
-      results: ['', [], [], []]
+      searchTerm: '',
+      titles: [],
+      descriptions: [],
+      urls: []
     }
   }
 
@@ -17,7 +20,10 @@ class ResultsContainer extends Component {
       const searchResults = await getResults(keyword)
       console.log(searchResults)
       this.setState({
-        results: searchResults
+        searchTerm: searchResults[0],
+        titles: searchResults[1],
+        descriptions: searchResults[2],
+        urls: searchResults[3]
       })
     } catch (error) {
      console.warn('Error in componentDidMount', error)
@@ -26,14 +32,12 @@ class ResultsContainer extends Component {
 
   render () {
     return (
-      <ResultsList results={this.state.results} />
+      <Results searchTerm={this.state.searchTerm}
+               titles={this.state.titles}
+               descriptions={this.state.descriptions}
+               urls={this.state.urls} />
     )
   }
 }
-
-ResultsContainer.propTypes = {
-  results: PropTypes.array.isRequired
-}
-
 
 export default ResultsContainer

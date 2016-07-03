@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import styles from '../styles'
 import { Link } from 'react-router'
 
 function StartOver () {
   return (
     <div>
-      <div className="form-group pull-left" style={{marginRight: '20px'}}>
+      <div className="form-group pull-left" style={{marginRight: '10px'}}>
         <Link to='/'>
           <button type="button" className="btn btn-danger">Search Again</button>
         </Link>
@@ -24,7 +24,21 @@ function StartOver () {
   )
 }
 
-function ResultsList (props) {
+function Result ({title, description, url}) {
+  return (
+    <div className="row">
+      <div className="col-sm-3">
+        <a href={url}>{title}</a>
+      </div>
+      <div className="col-sm-9 text-left" style={{'paddingBottom': '2px'}}>
+        {description.replace(/\(([^\)]+)\)/, '')}
+      </div>
+    </div>
+  )
+}
+
+
+function Results ({ searchTerm, titles, descriptions, urls }) {
   const { resultsWrapper, resultsHeader, resultsTitle } = styles
   var style
 
@@ -36,7 +50,7 @@ function ResultsList (props) {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      paddingTop: '120px'
+      paddingTop: '180px'
     }}
   }
   else {
@@ -49,16 +63,15 @@ function ResultsList (props) {
     }}
   }
 
-
   return (
       <div style={style.resultsFlexContainer}>
         <div className="results-wrapper" style={resultsWrapper}>
-        <h3 style={resultsHeader}>Such Results:  <span style={resultsTitle}>"{props.results[0]}"</span></h3>
+        <h4 style={resultsHeader}>Such Results:  <span style={resultsTitle}>"{searchTerm}"</span></h4>
 
-          {props.results[1].map((result, index) => {
-            const descript = props.results[2][index].replace(/\(([^\)]+)\)/, '')
-
-            return <p><a href={props.results[3][index]}>{props.results[1][index]}</a>: {descript}</p>
+          {titles.map((result, index) => {
+            return (
+              <Result key={index} title={titles[index]} description={descriptions[index]} url={urls[index]} />
+            )
           })}
         </div>
         <StartOver />
@@ -67,4 +80,11 @@ function ResultsList (props) {
   )
 }
 
-export default ResultsList
+Results.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  titles: PropTypes.array.isRequired,
+  descriptions: PropTypes.array.isRequired,
+  urls: PropTypes.array.isRequired
+}
+
+export default Results
