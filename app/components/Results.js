@@ -26,7 +26,7 @@ function StartOver () {
 
 function Result ({title, description, url}) {
   return (
-    <div className="row">
+    <div className="row" style={{marginRight: '0px', marginLeft: '0px'}}>
       <div className="col-sm-3">
         <a href={url}>{title}</a>
       </div>
