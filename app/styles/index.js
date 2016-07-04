@@ -37,7 +37,7 @@ const styles = {
     borderRadius: '15px',
     padding: '0 10px 10px 10px',
     marginBottom: '10px',
-    overflow: 'auto'
+    overflowY: 'auto'
   },
 
   resultsHeader: {
