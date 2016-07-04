@@ -16,8 +16,15 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    width: '100%',
-    overflow: 'auto'
+    width: '100%'
+  },
+
+  resultsFlexContainer: {
+    display: 'flex',
+    maxHeight: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   jumbotron: {
@@ -30,6 +37,7 @@ const styles = {
     borderRadius: '15px',
     padding: '0 10px 10px 10px',
     marginBottom: '10px',
+    overflow: 'auto'
   },
 
   resultsHeader: {

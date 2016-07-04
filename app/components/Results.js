@@ -39,32 +39,10 @@ function Result ({title, description, url}) {
 
 
 function Results ({ searchTerm, titles, descriptions, urls }) {
-  const { resultsWrapper, resultsHeader, resultsTitle } = styles
-  var style
-
-  // omg what a hack for media query on small screen.  embarassing.
-  if (document.documentElement.clientWidth < 767) {
-    style = {resultsFlexContainer: {
-      display: 'flex',
-      maxHeight: '100%',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingTop: '180px'
-    }}
-  }
-  else {
-    style = {resultsFlexContainer: {
-      display: 'flex',
-      maxHeight: '100%',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }}
-  }
+  const { resultsWrapper, resultsHeader, resultsTitle, resultsFlexContainer } = styles
 
   return (
-      <div style={style.resultsFlexContainer}>
+      <div style={resultsFlexContainer}>
         <div className="results-wrapper" style={resultsWrapper}>
           <h4 style={resultsHeader}>Such Results:  <span style={resultsTitle}>"{searchTerm}"</span></h4>
 
